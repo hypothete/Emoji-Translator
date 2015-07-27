@@ -1,0 +1,109 @@
+@keyframes emoji-enter {
+	0% {
+		transform: scale(0.99) translateY(5px);
+		opacity:1;
+	}
+	40% {
+		transform: scale(1.01);
+		opacity:0.9;
+	}
+	100% {
+		transform: scale(1);
+		opacity:1;
+	}
+}
+
+@-webkit-keyframes emoji-enter {
+	0% {
+		-webkit-transform: scale(0.99) translateY(20px);
+		opacity:1;
+	}
+	40% {
+		-webkit-transform: scale(1.01);
+		opacity:0.9;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity:1;
+	}
+}
+
+body{
+	position:absolute;
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Limelight', cursive;
+	background-color: #ccddff;
+}
+
+#scrubber {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	left:0%;
+	width: 100%;
+	background-color: #ffccdd;
+
+}
+
+audio {
+	width: 100%;
+}
+
+#filedrop {
+	width: 100%;
+	padding: 1rem;
+	background-color: #ffddcc;
+}
+
+#emoji-popover {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 20em;
+	display:flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#emoji-popover button {
+	padding: 1rem;
+	flex: 1;
+	font-size: 3rem;
+	height:6rem;
+}
+
+#emoji-list {
+	position: relative;
+	background-color: #ccffdd;
+	margin-top:1rem;
+	width: 100%;
+	height:20em;
+	overflow-y: scroll;
+}
+
+#emoji-list img {
+	width:75px;
+	height:75px;
+	cursor: pointer;
+}
+
+#display{
+	width: 50vw;
+	height: 50vw;
+	margin-left:10vw;
+}
+
+#display > img {
+	animation: emoji-enter 0.5s 1 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	-webkit-animation: emoji-enter 0.5s 1 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#recording {
+	margin-top: 1rem;
+	flex: 0 0 4;
+	width: 96%;
+}

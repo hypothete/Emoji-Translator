@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Emotional Translator</title>
+  <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="display"></div>
+
+	<div id="emoji-popover">
+		<div id="emoji-list"></div>
+		<button id="prev-emoji" onclick="prevEvent()">←</button>
+		<button id="add" onclick="addEvent()">✓</button>
+		<button id="remove" onclick="removeEvent()">✗</button>
+		<button id="next-emoji" onclick="nextEvent()">→</button>
+		<textarea id="recording" rows="10"></textarea>
+	</div>
+
+	<div id="scrubber">
+		<canvas id="emoji-points" width="800" height="40"></canvas>
+		<div id="filedrop">drop an mp3 here</div>
+		<audio src="ponponpon.mp3" controls></audio>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
